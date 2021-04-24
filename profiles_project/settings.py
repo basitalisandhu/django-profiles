@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'profiles_api',
+    'rest_framework_swagger',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +72,9 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'profiles_project.wsgi.application'
-
+REST_FRAMEWORK = {
+      'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+      }
 
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
